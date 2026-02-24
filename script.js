@@ -1,5 +1,5 @@
 // GANTI DENGAN URL VERCEL ANDA SETELAH DEPLOY
-const BASE_URL = "https://nama-proyek-anda.vercel.app"; 
+const BASE_URL = "https://back-2ujo.vercel.app"; 
 
 async function fetchInfo() {
     const url = document.getElementById('videoUrl').value;
