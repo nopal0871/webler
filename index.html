@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Socmed Downloader</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fab fa-youtube"></i> Socmed<span>Downloader</span></h1>
+            <p>Download dari YT, TikTok, IG, FB, Twitter secara gratis.</p>
+        </header>
+
+        <div class="input-section">
+            <input type="password" id="apiKey" placeholder="Input API Key...">
+            <div class="url-box">
+                <input type="text" id="videoUrl" placeholder="Tempel link video di sini...">
+                <button onclick="fetchInfo()" id="btnFetch">Analisis</button>
+            </div>
+        </div>
+
+        <div id="loader" class="hidden">
+            <div class="spinner"></div>
+            <p>Sedang mengambil data...</p>
+        </div>
+
+        <div id="result" class="hidden card">
+            <img id="thumb" src="" alt="Thumbnail">
+            <div class="content">
+                <h3 id="title">Judul Video</h3>
+                <p id="meta" class="meta-info"></p>
+                
+                <div class="download-options">
+                    <div class="opt-group">
+                        <label><i class="fas fa-video"></i> Video</label>
+                        <select id="videoFormats"></select>
+                        <button onclick="download('video')" class="btn-dl">Download Video</button>
+                    </div>
+                    
+                    <div class="opt-group">
+                        <label><i class="fas fa-music"></i> Audio Only</label>
+                        <select id="audioFormats"></select>
+                        <button onclick="download('audio')" class="btn-dl btn-audio">Download MP3</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
